@@ -104,3 +104,9 @@ composer.phar
 
 
 # End of https://www.gitignore.io/api/composer
+
+### Custom ###
+
+.env
+
+# End of Custom #
