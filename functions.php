@@ -39,3 +39,17 @@ add_filter('acf/settings/show_admin', '__return_true');
 
 // 4. Include ACF
 include_once(get_template_directory() . '/vendor/advanced-custom-fields/advanced-custom-fields-pro/acf.php' );
+
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+ 
+function my_acf_json_save_point( $path ) {
+    
+    // update path
+    $path = get_template_directory() . '/acf-json';
+    
+    
+    // return
+    return $path;
+    
+}
+ 
