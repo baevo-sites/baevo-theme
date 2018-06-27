@@ -1,0 +1,41 @@
+{
+  "name": "baevo-theme",
+  "version": "1.0.0",
+  "description": "wordpress theme for baevo site",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baevo-sites/baevo-theme.git"
+  },
+  "keywords": [
+    "baevo",
+    "theme",
+    "wordpress"
+  ],
+  "author": "baevo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baevo-sites/baevo-theme/issues"
+  },
+  "homepage": "https://github.com/baevo-sites/baevo-theme#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.6.4",
+    "css-loader": "^0.28.11",
+    "exports-loader": "^0.7.0",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.2",
+    "webpack-cli": "^3.0.8"
+  }
+}

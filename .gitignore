@@ -108,5 +108,6 @@ composer.phar
 ### Custom ###
 
 .env
+/dist/
 
 # End of Custom #

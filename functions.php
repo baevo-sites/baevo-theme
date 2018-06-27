@@ -52,4 +52,32 @@ function my_acf_json_save_point( $path ) {
     return $path;
     
 }
+
+class StarterSite extends TimberSite {
+
+  function __construct() {
+  
+    add_filter( 'timber_context', array( $this, 'add_to_context' ) );
+    add_action( 'wp_enqueue_scripts', array( $this, 'loadScripts' ) );
+    parent::__construct();
+  }
+
+  function add_to_context( $context ) {
+    $context['site'] = $this;
+    return $context;
+  }
+ 
+  function loadScripts() {
+    wp_enqueue_script(
+       'app' 
+      , get_template_directory_uri() . '/dist/index.js'
+      , array()
+      , false
+      , true
+    );
+  } 
+
+}
+
+new StarterSite();
  
