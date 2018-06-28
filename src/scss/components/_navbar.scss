@@ -1,0 +1,14 @@
+.navbar .nav-link {
+  font-family: 'DIN Pro Condensed Regular', sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline overline map-get($theme-colors, 'primary');
+}
+
+.navbar-toggler:focus {
+  outline: 0;
+}
