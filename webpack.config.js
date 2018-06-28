@@ -46,6 +46,15 @@ module.exports = {
             publicPath: 'wp-content/themes/baevo/dist/'
           }
         },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            publicPath: 'wp-content/themes/baevo/dist/'
+          }
+        }
       }
     ]
   }

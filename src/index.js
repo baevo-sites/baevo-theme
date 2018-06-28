@@ -1,11 +1,11 @@
 import './scss/style.scss';
 import 'bootstrap';
-import Logo from './assets/logo.png';
-import CoverBackground from './assets/cover_background.png';
+import logoImageSrc from './assets/logo.png';
+import coverImageSrc from './assets/cover_background.png';
 
-var logo = document.querySelector('.navbar-brand img');
-logo.src = Logo;
+var logoImage = document.querySelector('.navbar-brand img');
+logoImage.src = logoImageSrc;
 
-var coverBackground = document.querySelector('#cover-background');
-coverBackground.src = CoverBackground;
+var coverImage = document.querySelector('#cover-image');
+coverImage.src = coverImageSrc;
 

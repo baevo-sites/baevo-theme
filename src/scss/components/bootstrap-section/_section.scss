@@ -1,0 +1,13 @@
+@import 'variables';
+
+.section {
+  padding: $section-padding;
+
+  @include media-breakpoint-up(md) {
+    padding: $section-padding-medium;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: $section-padding-large;
+  }
+}
