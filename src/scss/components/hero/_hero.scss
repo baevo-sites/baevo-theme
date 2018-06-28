@@ -1,0 +1,70 @@
+@import "variables";
+
+.hero {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ // Sizes
+ .hero-small {
+    .hero-body {
+        padding-bottom: $hero-padding-y-small;
+        padding-top: $hero-padding-y-small;
+    }
+ }
+
+ .hero-medium {
+  // bootstrap md breakpoint
+  // bulma tablet breakpoint
+  @media (min-width: 768px) {
+    .hero-body {
+      padding-bottom: $hero-padding-y-medium;
+      padding-top: $hero-padding-y-medium;
+    }
+  }
+}
+
+ .hero-large {
+  // bootstrap md breakpoint
+  // bulma tablet breakpoint
+  @media (min-width: 768px) {
+    .hero-body {
+      padding-bottom: $hero-padding-y-large;
+      padding-top: $hero-padding-y-large;
+    }
+  }
+}
+
+ .hero-halfheight, .hero-fullheight {
+    .hero-body {
+        align-items: center;
+        display: flex;
+        & > .container {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+    }
+ }
+
+ .hero-halfheight {
+    min-height: 50vh;
+ }
+
+ .hero-fullheight {
+    min-height: 100vh;
+ }
+
+// Containers
+.hero-head,
+.hero-foot {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.hero-body {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: $hero-padding-y $hero-padding-x;
+}

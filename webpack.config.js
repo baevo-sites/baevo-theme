@@ -37,6 +37,15 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            publicPath: 'wp-content/themes/baevo/dist/'
+          }
+        },
       }
     ]
   }

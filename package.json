@@ -31,6 +31,7 @@
     "autoprefixer": "^8.6.4",
     "css-loader": "^0.28.11",
     "exports-loader": "^0.7.0",
+    "file-loader": "^1.1.11",
     "node-sass": "^4.9.0",
     "postcss-loader": "^2.1.5",
     "sass-loader": "^7.0.3",
