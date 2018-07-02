@@ -37,13 +37,13 @@
 @import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/utilities";
 
+// typography
+@import "typography";
+
 // components
 @import "components/bootstrap-hero/hero";
 @import "components/bootstrap-section/section";
 @import "components/navbar";
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  text-transform: uppercase;
-  letter-spacing: .03em;
-}
+@import "components/deco";
+@import "components/section";
+@import "components/question";

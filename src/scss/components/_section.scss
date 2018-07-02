@@ -1,0 +1,12 @@
+.section-meta {
+  margin-bottom: map-get($spacers, 5);
+}
+
+.section-label {
+  @extend .txt-1;
+}
+
+.section-deco {
+  margin-bottom: map-get($spacers, 2);
+  @extend .deco-line-1;
+}

@@ -1,0 +1,25 @@
+<section class="section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 col-md-8">
+        <div class="section-meta">
+          <span class="section-deco"></span>
+          <span class="section-label">{{ label }}</span>
+        </div>
+        <h2 class="h1">{{ title }}</h2>
+        <p>{{ text }}</p>
+      </div>
+    </div>
+    <div class="row">
+      {% for question in questions %}
+        <div class="col-12 col-md-6">
+          <div class="question">
+            <span class="small">{{ question.label }}</span>
+            <span class="question-deco"></span>
+            <p class="h3 question-text">{{ question.text }}</p>
+          </div>
+        </div>
+      {%  endfor %}
+    </div>
+  </div>
+</section>

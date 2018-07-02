@@ -1,0 +1,19 @@
+/*
+ * problem: the question-item boxes do not have equal height columns
+ * when one question spans 2 lines and other 1 line. 
+ */
+ .question {
+  border: 2px solid $gray-200;
+  padding: 2rem;
+  margin-bottom: map-get($spacers, 5);
+}
+
+.question-text {
+  margin-bottom: 0;
+}
+
+.question-deco {
+  @extend .deco-line-2;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

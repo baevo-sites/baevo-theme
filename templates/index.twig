@@ -3,4 +3,10 @@
 {% block content %}
   {% include 'components/navbar.twig' %}
   {% include 'components/cover.twig' %}
+  {% include 'components/services.twig' with { 
+    title: services.title,
+    label: services.label,
+    text: services.text,
+    questions: services.questions 
+  } %}
 {% endblock %}

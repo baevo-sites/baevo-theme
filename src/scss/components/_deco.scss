@@ -1,0 +1,13 @@
+.deco-line-1 {
+  height: 2px;
+  max-width: 1rem;
+  display: block;
+  background-color: map-get($theme-colors, 'primary');
+}
+
+.deco-line-2 {
+  height: 1px;
+  width: 32px;
+  display: block;
+  background-color: map-get($theme-colors, 'primary');
+}
