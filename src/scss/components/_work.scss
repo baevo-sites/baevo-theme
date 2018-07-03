@@ -1,0 +1,17 @@
+.work {
+  margin-bottom: 0;
+}
+
+.work-content {
+  text-align: center;
+  padding: map-get($spacers, 4);
+}
+
+.work-title {
+  margin-bottom: 0;
+}
+
+.work-deco {
+  @extend .deco-line-2;
+  margin: 1rem auto;
+}

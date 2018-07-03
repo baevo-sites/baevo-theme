@@ -1,0 +1,27 @@
+<section class="section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 col-md-8">
+        <div class="section-meta">
+          <span class="section-deco"></span>
+          <span class="section-label">{{ label }}</span>
+        </div>
+        <h2 class="h1">{{ title }}</h2>
+        <p>{{ text }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid pl-0 pr-0">
+    <ul class="row no-gutters list-unstyled">
+      {% for work in works %}
+        <li class="col-12 col-md-4">
+          {% include 'components/work.twig' with { 
+            title: work.title,
+            text: work.text,
+            image: work.image, 
+          } %}
+        </li>
+      {%  endfor %}
+    </ul>
+  </div>
+</section>

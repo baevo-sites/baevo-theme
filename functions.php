@@ -59,6 +59,7 @@ class StarterSite extends TimberSite {
   
     add_filter( 'timber_context', array( $this, 'add_to_context' ) );
     add_action( 'wp_enqueue_scripts', array( $this, 'loadScripts' ) );
+    add_action( 'init', array( $this, 'register_post_types' ) );
     parent::__construct();
   }
 
@@ -75,7 +76,24 @@ class StarterSite extends TimberSite {
       , false
       , true
     );
-  } 
+  }
+
+  function register_post_types() {
+		// Register Works
+    $works_labels = array(
+      'name'               => 'Works',
+      'singular_name'      => 'Work',
+      'menu_name'          => 'Works'
+    );
+    $works_args = array(
+      'labels'             => $works_labels,
+      'public'             => true,
+      'capability_type'    => 'post',
+      'has_archive'        => true,
+      'supports'           => array( 'title' ),
+    );
+    register_post_type('works', $works_args);
+  }
 
 }
 

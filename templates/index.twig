@@ -9,4 +9,10 @@
     text: services.text,
     questions: services.questions 
   } %}
+  {% include 'components/portfolio.twig' with { 
+    title: portfolio.title,
+    label: portfolio.label,
+    text: portfolio.text,
+    works: works, 
+  } %}
 {% endblock %}

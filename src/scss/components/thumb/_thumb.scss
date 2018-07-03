@@ -1,0 +1,34 @@
+@import "variables";
+
+.thumb {
+  overflow: hidden;
+  position: relative;
+}
+.thumb-img {
+  transition: all .2s ease-in-out;
+}
+
+.thumb-inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -100%;
+  background-color: $thumb-inner-background-color;
+  color: white;
+}
+
+.thumb:hover .thumb-inner {
+  bottom: 0;
+  top: 0;
+}
+
+.thumb:hover .thumb-img {
+  transform: scale(1.1); 
+}
+
+.thumb-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); 
+  width: 100%;
+}
