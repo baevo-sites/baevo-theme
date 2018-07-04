@@ -1,0 +1,24 @@
+<section class="section">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-12 col-md-6">
+        <div class="square">
+          <div class="square-content">
+            <div class="h-100 d-flex flex-column p-3 p-md-5">
+              <h2 class="mt-auto mb-0">{{ title }}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% for feature in features %}
+        <div class="col-12 col-md-6">
+          {% include 'components/feature.twig' with { 
+            title: feature.title,
+            label: feature.label, 
+            index: loop.index
+          } %}
+        </div> 
+      {% endfor %}
+    </div>
+  </div>
+</section>

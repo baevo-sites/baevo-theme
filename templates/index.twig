@@ -15,4 +15,8 @@
     text: portfolio.text,
     works: works, 
   } %}
+  {% include 'components/process.twig' with { 
+    title: process.title,
+    features: process.features, 
+  } %}
 {% endblock %}

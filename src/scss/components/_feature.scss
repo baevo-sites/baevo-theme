@@ -1,0 +1,16 @@
+.feature {
+  color: white;
+}
+
+.feature-1 {
+  background-color: $gray-200;
+  color: $gray-900;
+}
+
+.feature-2 {
+  background-color: $gray-900;
+}
+
+.feature-3 {
+  background-color: map-get($theme-colors, 'primary');
+}

@@ -7,5 +7,6 @@ $context['works'] = Timber::get_posts(array(
   'post_status' => 'publish',
   'posts_per_page' => '9'
 ));
+$context['process'] = get_field('process');
 Timber::render( 'index.twig', $context );
 ?>
