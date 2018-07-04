@@ -19,4 +19,10 @@
     title: process.title,
     features: process.features, 
   } %}
+  {% include 'components/about.twig' with { 
+    title: about.title,
+    label: about.label,
+    text: about.text,
+    quote: about.quote, 
+  } %}
 {% endblock %}
