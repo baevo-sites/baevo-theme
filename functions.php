@@ -93,9 +93,26 @@ class StarterSite extends TimberSite {
       'supports'           => array( 'title' ),
     );
     register_post_type('works', $works_args);
+
+    // Contact form
+    $contacts_labels = array( 
+      'name'          => 'Contacts',
+      'singular_name' => 'Contact',
+      'menu_name'     => 'Contacts'
+    );
+    $contacts_args = array(
+      'labels'             => $contacts_labels,
+      'public'             => true,
+      'capability_type'    => 'post',
+      'has_archive'        => true,
+      'supports'           => array('title')
+    );
+    register_post_type('contacts', $contacts_args);
   }
 
 }
 
 new StarterSite();
+
+require_once( __DIR__ . '/inc/functions-contact-form.php' );
  

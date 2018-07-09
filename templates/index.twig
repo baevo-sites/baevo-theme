@@ -1,6 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
+  {{ function('acf_form_head') }}
   {% include 'components/navbar.twig' %}
   {% include 'components/cover.twig' %}
   {% include 'components/services.twig' with { 
@@ -24,5 +25,9 @@
     label: about.label,
     text: about.text,
     quote: about.quote, 
+  } %}
+
+  {% include 'components/contact.twig' with { 
+    addresses: contact.addresses
   } %}
 {% endblock %}

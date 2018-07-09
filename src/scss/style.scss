@@ -53,3 +53,32 @@
 @import "components/feature";
 @import "components/about";
 
+form label {
+  @extend .txt-2;
+  font-size: 1rem;
+}
+
+.form-control-minimal, .form-control-minimal:focus {
+  box-shadow: none;
+  outline: 0;
+  border-radius: 0;
+  border-width: 0 0 1px;
+  border-color: $gray-900;
+  margin-bottom: 4rem;
+}
+
+
+
+.acf-button {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  @extend .txt-1;
+  font-size: 1.5rem;
+  padding: map-get($spacers, 4);
+  border-radius: 0;
+  color: white;
+}
+.acf-button:hover {
+  color: white;
+}

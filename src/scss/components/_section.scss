@@ -10,3 +10,7 @@
   margin-bottom: map-get($spacers, 2);
   @extend .deco-line-1;
 }
+
+.section-title {
+  margin-bottom: map-get($spacers, 3);
+}

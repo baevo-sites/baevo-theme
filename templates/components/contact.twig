@@ -1,0 +1,24 @@
+<section class="section">
+  <div class="container">
+    <img class="img-fluid mb-5" src="" alt="" id="contact-title">
+    <div class="row">
+      <div class="col-12 col-md-6 ">
+        {% for address in addresses %}
+          {% set address = address.address %}
+          {% include 'components/address.twig' with {
+            street: address.street,
+            number: address.number,
+            floor: address.floor,
+            city: address.city,
+            postal_code: address.postal_code,
+            phone: address.phone,
+            email: address.email,
+          } %}
+        {% endfor %}
+      </div>
+      <div class="col-12 col-md-6">
+        {{ function('acf_form', 'new-contact') }}
+      </div>
+    </div>
+  </div>
+  </section>

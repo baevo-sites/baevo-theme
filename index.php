@@ -9,5 +9,6 @@ $context['works'] = Timber::get_posts(array(
 ));
 $context['process'] = get_field('process');
 $context['about'] = get_field('about');
+$context['contact'] = get_field('contact');
 Timber::render( 'index.twig', $context );
 ?>
