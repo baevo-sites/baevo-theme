@@ -37,11 +37,14 @@ acf_register_form(array(
 	'new_post'	=> array(
 		'post_type'		=> 'contacts',
 		'post_status'	=> 'publish'
-	),
+  ),
+  'return' => '?updated=true#contact',
 	'post_title'=> false,
   'post_content'=> false,
   'submit_value'	=> 'consulta gratuita',
   'fields' => array('name', 'email', 'content'),
+  'updated_message' => __("Gracias por tu consulta, contactaremos contigo lo antes posible", 'acf'),
+	'html_updated_message'	=> '<div id="message" class="alert alert-success"><p>%s</p></div>',
   'kses'	=> true
 ));
 
