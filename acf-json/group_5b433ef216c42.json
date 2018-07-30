@@ -4,11 +4,11 @@
     "fields": [
         {
             "key": "field_5b433eff5b622",
-            "label": "name",
+            "label": "nombre",
             "name": "name",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -19,7 +19,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": 50
         },
         {
             "key": "field_5b433f0c5b623",
@@ -27,7 +27,7 @@
             "name": "email",
             "type": "email",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -41,11 +41,11 @@
         },
         {
             "key": "field_5b433f1a5b624",
-            "label": "content",
+            "label": "consulta",
             "name": "content",
             "type": "textarea",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -76,5 +76,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1531133732
+    "modified": 1532955495
 }

@@ -64,10 +64,10 @@ form label {
   border-radius: 0;
   border-width: 0 0 1px;
   border-color: $gray-900;
-  margin-bottom: 4rem;
+  //margin-bottom: 4rem;
+  margin-bottom: 0;
+  padding-left: 0;
 }
-
-
 
 .acf-button {
   @extend .btn;
@@ -81,4 +81,13 @@ form label {
 }
 .acf-button:hover {
   color: white;
+}
+
+.acf-error-message {
+  @extend .text-danger;
+  font-size: 80%;
+}
+
+.acf-error-message p {
+  margin-bottom: 0;
 }

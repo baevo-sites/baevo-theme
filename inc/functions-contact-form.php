@@ -42,8 +42,10 @@ acf_register_form(array(
   'post_content'=> false,
   'submit_value'	=> 'consulta gratuita',
   'fields' => array('name', 'email', 'content'),
+  'kses'	=> true
 ));
 
+add_action('acf/save_post', 'after_save_contact', 20);
 function after_save_contact( $post_id ) {  
   // bail early if not a contact_form post
   if( get_post_type($post_id) !== 'contacts' ) { return; }
@@ -77,4 +79,35 @@ function after_save_contact( $post_id ) {
   wp_mail( $to, $subject, $body, $headers );
 }
 
-add_action('acf/save_post', 'after_save_contact', 20);
+add_filter('acf/validate_value/name=name', 'validate_name', 10, 4);
+function validate_name( $valid, $value, $field, $input ) {
+  if (empty($value)) {
+    $valid = 'Este valor es requerido.';
+    return $valid;
+  }
+
+  return $valid;	
+}
+
+add_filter('acf/validate_value/name=email', 'validate_email', 10, 4);
+function validate_email( $valid, $value, $field, $input ) {
+  if (empty($value)) {
+    return 'Este valor es requerido.';
+  }
+
+  if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
+    return 'Este valor debe ser un correo válido.';
+  }
+
+  return $valid;	
+}
+
+add_filter('acf/validate_value/name=content', 'validate_content', 10, 4);
+function validate_content( $valid, $value, $field, $input ) {
+  if (empty($value)) {
+    $valid = 'Este valor es requerido.';
+    return $valid;
+  }
+
+  return $valid;	
+}
