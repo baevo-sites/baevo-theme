@@ -17,6 +17,27 @@ jQuery(document).ready(function($){
   }); // If you want to validate fields right after page loading, just add this here : .validate()
 });
 */
+
+jQuery(document).ready(function($) {
+  
+  function removeMessage() {
+    var $message = $('div#message');
+    if ($message.length) {
+      $message.remove(); 
+    }
+  }
+
+  var $form = $('#new-contact');
+  $form
+    .find('input[id^="acf-field"]')
+    .focus(removeMessage)
+  
+  $form
+    .find('input[type="submit"]')
+    .click(removeMessage)
+
+});
+
 var logoImage = document.querySelector('.navbar-brand img');
 logoImage.src = logoImageSrc;
 
